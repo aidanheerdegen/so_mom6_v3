@@ -1,0 +1,27 @@
+ncpus: 240
+mem: 32GB #512GB
+#walltime: 07:00:00
+walltime: 05:00:00
+jobname: so_topog_v3
+project: v45
+queue: normal
+
+model: mom6
+shortpath: /short/v45
+exe: MOM6
+input: so_mom6_v3
+
+collate: False
+
+mpi:
+    module: openmpi/1.8.8
+    #module: intel-mpi/5.1.0.079
+
+#mpiP: True
+#ipm: 2.0.2
+#itac: 9.0.3.051
+
+#mpirun: -trace
+
+# debug: true
+qsub_flags: -W umask=027
